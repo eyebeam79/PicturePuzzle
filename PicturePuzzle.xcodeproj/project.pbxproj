@@ -23,6 +23,7 @@
 		B319B247188F53BC005F4D41 /* PicturePuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B319B246188F53BC005F4D41 /* PicturePuzzleTests.m */; };
 		B319B252188F5597005F4D41 /* PuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B319B251188F5597005F4D41 /* PuzzleViewController.m */; };
 		B319B255188F5A12005F4D41 /* start-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B319B254188F5A12005F4D41 /* start-button.png */; };
+		B319B257188F8507005F4D41 /* ws_icon_large.png in Resources */ = {isa = PBXBuildFile; fileRef = B319B256188F8507005F4D41 /* ws_icon_large.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		B319B250188F5597005F4D41 /* PuzzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleViewController.h; sourceTree = "<group>"; };
 		B319B251188F5597005F4D41 /* PuzzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleViewController.m; sourceTree = "<group>"; };
 		B319B254188F5A12005F4D41 /* start-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-button.png"; sourceTree = "<group>"; };
+		B319B256188F8507005F4D41 /* ws_icon_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ws_icon_large.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +124,10 @@
 				B319B22D188F53BC005F4D41 /* Main.storyboard */,
 				B319B230188F53BC005F4D41 /* ViewController.h */,
 				B319B231188F53BC005F4D41 /* ViewController.m */,
-				B319B233188F53BC005F4D41 /* Images.xcassets */,
-				B319B222188F53BC005F4D41 /* Supporting Files */,
 				B319B250188F5597005F4D41 /* PuzzleViewController.h */,
 				B319B251188F5597005F4D41 /* PuzzleViewController.m */,
+				B319B233188F53BC005F4D41 /* Images.xcassets */,
+				B319B222188F53BC005F4D41 /* Supporting Files */,
 			);
 			path = PicturePuzzle;
 			sourceTree = "<group>";
@@ -163,6 +165,7 @@
 		B319B253188F59EA005F4D41 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B319B256188F8507005F4D41 /* ws_icon_large.png */,
 				B319B254188F5A12005F4D41 /* start-button.png */,
 			);
 			name = Images;
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B319B257188F8507005F4D41 /* ws_icon_large.png in Resources */,
 				B319B234188F53BC005F4D41 /* Images.xcassets in Resources */,
 				B319B226188F53BC005F4D41 /* InfoPlist.strings in Resources */,
 				B319B255188F5A12005F4D41 /* start-button.png in Resources */,

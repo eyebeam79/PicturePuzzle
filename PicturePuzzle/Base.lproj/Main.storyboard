@@ -16,16 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ws_icon_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="kUm-Vn-Osm">
+                                <rect key="frame" x="0.0" y="67" width="320" height="501"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Picture Puzzle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-P8-CRG">
-                                <rect key="frame" x="58" y="105" width="204" height="52"/>
+                                <rect key="frame" x="58" y="83" width="204" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-eg-RS5">
-                                <rect key="frame" x="109" y="366" width="102" height="30"/>
+                                <rect key="frame" x="93" y="464" width="135" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Get the picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -59,7 +64,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otN-VP-v7n">
-                                <rect key="frame" x="230" y="478" width="70" height="70"/>
+                                <rect key="frame" x="234" y="475" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Button" image="start-button.png">
@@ -69,6 +74,10 @@
                                     <action selector="startGame:" destination="GZ6-mC-7RJ" eventType="touchUpInside" id="cRL-yO-3AV"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="plz-fC-aJu">
+                                <rect key="frame" x="7" y="465" width="80" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -81,10 +90,15 @@
                                 <segment title="Basic"/>
                                 <segment title="Hard"/>
                             </segments>
+                            <connections>
+                                <action selector="changeGameLevel:" destination="GZ6-mC-7RJ" eventType="valueChanged" id="dE6-SP-PDW"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="4VG-ga-m44" id="Xhy-NA-2F2"/>
+                        <outlet property="referenceView" destination="plz-fC-aJu" id="6Jo-5i-7dK"/>
+                        <outlet property="startButton" destination="otN-VP-v7n" id="gzR-rh-R4Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFE-Zz-cLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -112,6 +126,7 @@
     </scenes>
     <resources>
         <image name="start-button.png" width="329" height="328"/>
+        <image name="ws_icon_large.png" width="252" height="252"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
