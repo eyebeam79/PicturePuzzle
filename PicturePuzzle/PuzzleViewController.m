@@ -94,6 +94,10 @@
     [self alignImage];
     self.referenceView.image = self.imageView.image;
     
+    UIImage *lastImage = [UIImage imageNamed:@"empty_image.png"];
+    UIImageView *lastImageView = (UIImageView *)[self.view viewWithTag:100];
+    lastImageView.image = lastImage;
+    
     [self.startButton setEnabled:NO];
   
 }
@@ -117,12 +121,13 @@
             
 
             for(;;){
-                int currentPosition = arc4random()%((_gameLevel==1) ? BASIC_GAME_PIECE_IMAGE_NUM : HARD_GAME_PIECE_IMAGE_NUM);
+                int currentPosition = arc4random()%((_gameLevel==1) ? BASIC_GAME_PIECE_IMAGE_NUM : HARD_GAME_PIECE_IMAGE_NUM) - 1;
                 
                 if (_gameLevel==1)
                 {
                     if (!imagePosBasic[currentPosition])
                     {
+                        
                         int iWidthPos, iHeightPos;
                             
                         UIImageView *imageView = [[UIImageView alloc] initWithImage:newImage];
@@ -137,6 +142,8 @@
                             
                         break;
                     }
+                    
+                     if (imageTag >= BASIC_GAME_PIECE_IMAGE_NUM) break;
                 }
                 else
                 {
@@ -156,34 +163,19 @@
                             
                         break;
                     }
-                        
+                
+                    if (imageTag >= HARD_GAME_PIECE_IMAGE_NUM) break;
                 }
             }
             
         } // for-statements (row)
     } // for-statements (column)
     
-    UIImage *lastImage = [UIImage imageNamed:@"empty_image.png"];
-    UIImageView *lastImageView;
-    
-    if (_gameLevel==1)
-    {
-        lastImageView = (UIImageView *)[self.view viewWithTag:imagePosBasic[BASIC_GAME_PIECE_IMAGE_NUM-1]];
-    }
-    else
-    {
-        lastImageView = (UIImageView *)[self.view viewWithTag:imagePosHard[HARD_GAME_PIECE_IMAGE_NUM-1]];
-    }
-    
-    
-    lastImageView.image = lastImage;
-   
-    
-    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
     
 }
 
