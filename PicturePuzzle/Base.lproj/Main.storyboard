@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="703" y="110"/>
         </scene>
-        <!--View Controller-->
+        <!--Puzzle View Controller-->
         <scene sceneID="AgU-p4-K9Q">
             <objects>
-                <viewController id="GZ6-mC-7RJ" sceneMemberID="viewController">
+                <viewController id="GZ6-mC-7RJ" customClass="PuzzleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5xx-S0-Mfi"/>
                         <viewControllerLayoutGuide type="bottom" id="kwj-vu-RxT"/>
@@ -54,14 +54,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4VG-ga-m44">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4VG-ga-m44">
                                 <rect key="frame" x="0.0" y="63" width="320" height="400"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otN-VP-v7n">
+                                <rect key="frame" x="230" y="478" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button" image="start-button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="GZ6-mC-7RJ" eventType="touchUpInside" id="cRL-yO-3AV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4T9-GT-Q6j"/>
+                    <navigationItem key="navigationItem" id="4T9-GT-Q6j">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="TLw-gN-arA">
+                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Basic"/>
+                                <segment title="Hard"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="4VG-ga-m44" id="Xhy-NA-2F2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFE-Zz-cLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,6 +110,9 @@
             <point key="canvasLocation" x="307" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="start-button.png" width="329" height="328"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

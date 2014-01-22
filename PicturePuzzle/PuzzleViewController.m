@@ -8,20 +8,52 @@
 
 #import "PuzzleViewController.h"
 
-@interface PuzzleViewController ()
+@interface PuzzleViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImage *orginalImage;
 
 @end
 
 @implementation PuzzleViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+- (void) viewWillAppear:(BOOL)animated
+
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [super viewWillAppear:animated];
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
 }
+
+- (void) imagePickerController:(UIImagePickerController *)picker
+         didFinishPickingImage:(UIImage *)image
+                   editingInfo:(NSDictionary *)editingInfo
+{
+    self.imageView.image = image;
+    self.orginalImage = image;
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (IBAction)startGame:(id)sender
+{
+    
+    
+    CGRect cropRect = CGRectMake(0, 63, 80, 80);
+    CGImageRef cropped_img = CGImageCreateWithImageInRect([self.orginalImage CGImage], cropRect);
+    
+    UIImage *newImage = [[UIImage alloc]initWithCGImage:cropped_img];
+    CGImageRelease(cropped_img);
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:newImage];
+    [imageView setFrame:CGRectMake(160, 63, 80, 80)];
+    [[self view] addSubview:imageView];
+
+
+}
+
 
 - (void)viewDidLoad
 {
