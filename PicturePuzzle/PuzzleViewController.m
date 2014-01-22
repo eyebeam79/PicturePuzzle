@@ -163,6 +163,33 @@
         } // for-statements (row)
     } // for-statements (column)
     
+    UIImage *lastImage = [UIImage imageNamed:@"empty_image.png"];
+    UIImageView *lastImageView;
+    
+    if (_gameLevel==1)
+    {
+        lastImageView = (UIImageView *)[self.view viewWithTag:imagePosBasic[BASIC_GAME_PIECE_IMAGE_NUM-1]];
+    }
+    else
+    {
+        lastImageView = (UIImageView *)[self.view viewWithTag:imagePosHard[HARD_GAME_PIECE_IMAGE_NUM-1]];
+    }
+    
+    
+    lastImageView.image = lastImage;
+   
+    
+    
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
 }
 
 
