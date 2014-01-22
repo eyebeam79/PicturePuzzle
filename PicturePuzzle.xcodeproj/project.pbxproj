@@ -21,6 +21,7 @@
 		B319B23D188F53BC005F4D41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B319B21F188F53BC005F4D41 /* UIKit.framework */; };
 		B319B245188F53BC005F4D41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B319B243188F53BC005F4D41 /* InfoPlist.strings */; };
 		B319B247188F53BC005F4D41 /* PicturePuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B319B246188F53BC005F4D41 /* PicturePuzzleTests.m */; };
+		B319B252188F5597005F4D41 /* PuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B319B251188F5597005F4D41 /* PuzzleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		B319B242188F53BC005F4D41 /* PicturePuzzleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PicturePuzzleTests-Info.plist"; sourceTree = "<group>"; };
 		B319B244188F53BC005F4D41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B319B246188F53BC005F4D41 /* PicturePuzzleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicturePuzzleTests.m; sourceTree = "<group>"; };
+		B319B250188F5597005F4D41 /* PuzzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleViewController.h; sourceTree = "<group>"; };
+		B319B251188F5597005F4D41 /* PuzzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				B319B231188F53BC005F4D41 /* ViewController.m */,
 				B319B233188F53BC005F4D41 /* Images.xcassets */,
 				B319B222188F53BC005F4D41 /* Supporting Files */,
+				B319B250188F5597005F4D41 /* PuzzleViewController.h */,
+				B319B251188F5597005F4D41 /* PuzzleViewController.m */,
 			);
 			path = PicturePuzzle;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			files = (
 				B319B232188F53BC005F4D41 /* ViewController.m in Sources */,
 				B319B22C188F53BC005F4D41 /* AppDelegate.m in Sources */,
+				B319B252188F5597005F4D41 /* PuzzleViewController.m in Sources */,
 				B319B228188F53BC005F4D41 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
